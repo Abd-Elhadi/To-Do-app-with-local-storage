@@ -1,9 +1,30 @@
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 .container {
     width: 500px;
     margin: 20px auto;
+}
+
+.container .title {
+    color: rgb(111, 111, 251);
+    text-align: center;
+    background-color: #ddd;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+    .container {
+        position: relative;
+        max-width: 350px;
+        margin: 5px;
+    }
 }
 .form {
     background-color: #eee;
