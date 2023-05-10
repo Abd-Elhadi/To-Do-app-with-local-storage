@@ -1,6 +1,7 @@
 let input = document.querySelector(".input");
 let submit = document.querySelector(".add");
 let tasksDiv = document.querySelector(".tasks");
+let deleteAllButton = document.querySelector('.remove-all');
 
 // Empty Array To Store The Tasks
 let arrayOfTasks = [];
@@ -102,5 +103,11 @@ function toggleStatusTaskWith(taskId) {
             arrayOfTasks[i].completed == false ? (arrayOfTasks[i].completed = true) : (arrayOfTasks[i].completed = false);
         }
     }
+    addDataToLocalStorageFrom(arrayOfTasks);
+}
+
+deleteAllButton.onclick = () => {
+    arrayOfTasks = [];
+    tasksDiv.innerHTML = '';
     addDataToLocalStorageFrom(arrayOfTasks);
 }
